@@ -158,6 +158,7 @@
     font-size: 1rem;
     border: none;
     left: calc(50vw - 30rem);
+    width: 0;
   }
 
   #tabmenutable {
