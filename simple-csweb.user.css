@@ -1,0 +1,302 @@
+/* ==UserStyle==
+@name         Simple CSWeb
+@namespace    github.com/acomagu/simple-csweb
+@version      1.0.0
+@license      unlicense
+@preprocessor stylus
+@var checkbox show-left-sidebar "Show Left Sidebar" 0
+@var checkbox show-right-sidebar "Show Right Sidebar" 0
+==/UserStyle== */
+
+@-moz-document url-prefix("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do") {
+  if not show-left-sidebar {
+    #area-m1-parent {
+      display: none;
+    }
+  }
+
+  if not show-right-sidebar {
+    #area-m3-parent {
+      display: none;
+    }
+  }
+
+  :root {
+    --sidebar-top: calc(7rem + 1.2rem);
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  #portalrow-top-sp {
+    display: none;
+  }
+
+  #logo-span {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  #logo-area {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 60rem !important;
+  }
+
+  #portal-loginuser-info {
+    max-width: unset;
+    min-width: unset;
+  }
+
+  #portal-loginuser-info > ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .portlet-title {
+    font-size: 1.8em;
+    background: none;
+    color: #000;
+    padding: 0 0 0.8em 0;
+  }
+
+  .portlet-title > img {
+    display: none;
+  }
+
+  .portlet {
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 1px 8px #aaa;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+  }
+
+  #header-area .portlet {
+    padding: 0.8rem 2rem;
+    margin: 0;
+    border: none;
+    height: 5rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #header-area .portlet:first-child {
+    width: 10.9rem;
+  }
+
+  #body-span {
+    position: relative;
+    left: calc(50vw - 30rem + 14rem);
+  }
+
+  #body-span,
+  #logo-span {
+    background: none;
+  }
+
+  .mysch-portlet-title,
+  .mysch-portlet-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .portlet#main-frame {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #tab-span,
+  #logo-span {
+    margin: 0;
+    padding: 0;
+  }
+
+  #tabtable {
+    width: inherit !important;
+    position: absolute;
+    text-align: left;
+    top: var(--sidebar-top);
+    left: calc(50vw - 30rem + 0.5rem);
+  }
+
+  #tabtable .tabcell {
+    clear: both;
+    width: 100% !important;
+    height: inherit !important;
+    text-align: left;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    line-height: 1rem;
+  }
+
+  #tabtable .tabcell.tabcell-sel {
+    border-radius: 0 1.4rem 1.4rem 0;
+    background: none;
+    border: none;
+    color: #099898;
+    font-weight: bold;
+  }
+
+  #tabtable .tabcell > img {
+    display: none !important;
+  }
+
+  #tabtable p {
+    font-size: 1rem;
+  }
+
+  #tabmenu-area {
+    position: absolute;
+    z-index: 1000;
+    background: none;
+    color: #000;
+    font-size: 1rem;
+    border: none;
+    left: calc(50vw - 30rem);
+  }
+
+  #tabmenutable {
+    width: inherit !important;
+    margin: 0 2.7rem !important;
+  }
+
+  #tabmenu-ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  #tabmenu-ul li {
+    clear: both;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+    line-height: 1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 13rem;
+    white-space: nowrap;
+  }
+
+  #tabmenutable img:first-child {
+    display: none;
+  }
+
+  #footer-span {
+    display: none;
+  }
+
+  /* Material Theme */
+  body#portal-body {
+    background: #f8f8f8 !important;
+  }
+
+  #header-span {
+    background: #fff;
+    box-shadow: 0 0 5px #aaa;
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=home.*"),
+regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(3 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 1 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=gk.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(2 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 2 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=rs.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(6 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 3 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=si.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(2 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 4 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=kh.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(4 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 5 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=sy.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(1 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 6 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=en.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(1 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 7 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=kj.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(2 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 8 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=re.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(8 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 9 * 2.6rem - 3px);
+  }
+}
+
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=ot.*") {
+  #tabtable .tabcell.tabcell-sel {
+    margin-bottom: calc(4 * 2.6rem);
+  }
+
+  #tabmenu-area {
+    top: calc(var(--sidebar-top) + 10 * 2.6rem - 3px);
+  }
+}
