@@ -8,6 +8,6 @@ The user CSS to simplify the CSWeb.
 
 ## Installation
 
-The [Stylus](https://csweb.u-aizu.ac.jp/campusweb/campusportal.do?page=main&tabId=rs) should be installed to your browser.
+The [Stylus](https://github.com/openstyles/stylus#releases) should be installed to your browser.
 
 Then [Click here to install](https://github.com/acomagu/simple-csweb/raw/master/simple-csweb.user.css).
