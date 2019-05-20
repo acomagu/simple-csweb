@@ -8,7 +8,7 @@
 @var checkbox show-right-sidebar "Show Right Sidebar" 0
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*(campussquare|page=main).*") {
   if not show-left-sidebar {
     #area-m1-parent {
       display: none;
@@ -200,8 +200,8 @@
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=home.*"),
-regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=home.*"),
+regexp("https://csweb.u-aizu.ac.jp/campusweb.*\\?[^t]*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(3 * 2.6rem);
   }
@@ -211,7 +211,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=gk.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=gk.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(2 * 2.6rem);
   }
@@ -221,7 +221,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=rs.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=rs.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(6 * 2.6rem);
   }
@@ -231,7 +231,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=si.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=si.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(2 * 2.6rem);
   }
@@ -241,7 +241,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=kh.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=kh.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(4 * 2.6rem);
   }
@@ -251,7 +251,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=sy.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=sy.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(1 * 2.6rem);
   }
@@ -261,7 +261,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=en.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=en.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(1 * 2.6rem);
   }
@@ -271,7 +271,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=kj.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=kj.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(2 * 2.6rem);
   }
@@ -281,7 +281,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=re.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=re.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(8 * 2.6rem);
   }
@@ -291,7 +291,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*\\?[^t]*") {
   }
 }
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal\.do.*tabId=ot.*") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=ot.*") {
   #tabtable .tabcell.tabcell-sel {
     margin-bottom: calc(4 * 2.6rem);
   }
