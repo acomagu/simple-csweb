@@ -2,7 +2,7 @@
 @name         Simple CSWeb
 @namespace    github.com/acomagu/simple-csweb
 @version      1.0.1
-@license      unlicense
+@license      MIT
 @preprocessor stylus
 @var checkbox show-left-sidebar "Show Left Sidebar" 0
 @var checkbox show-right-sidebar "Show Right Sidebar" 0
