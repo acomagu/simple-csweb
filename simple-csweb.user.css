@@ -8,7 +8,7 @@
 @var checkbox show-right-sidebar "Show Right Sidebar" 0
 ==/UserStyle== */
 
-@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal.do(?:\?locale.*)") {
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal.do(\?locale.*|)") {
   #portal-body {
     background-color: #f7f7f7;
     height: 100vh;
