@@ -8,6 +8,100 @@
 @var checkbox show-right-sidebar "Show Right Sidebar" 0
 ==/UserStyle== */
 
+@-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb/campusportal.do(?!.*page=).*") {
+  #portal-body {
+    background-color: #f7f7f7;
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #portaltable {
+    margin: 0 auto !important;
+  }
+
+  #body-span {
+    height: auto;
+  }
+
+  #body-area {
+    width: 100vw !important;
+    margin: 0 !important;
+  }
+
+  .slider-wrapper {
+    height: auto !important;
+    width: auto !important;
+  }
+
+  #login-logo-slider {
+    height: 250px !important;
+    width: 250px !important;
+    margin: 0 !important;
+    background-color: whitesmoke;
+  }
+
+  #login-logo-slider img {
+    height: 250px;
+    width: 250px;
+  }
+
+  #login-sec1-msg,
+  #LoginFormSimple {
+    margin: 0 !important;
+  }
+
+  input {
+    height: 30px !important;
+    width: 250px !important;
+    padding: 0 !important;
+    outline: none;
+    text-decoration: none;
+    border: solid 2px white;
+    background-color: white;
+  }
+
+  .ui-button {
+    height: 40px !important;
+    width: 100% !important;
+    border: 0;
+    background: white;
+    font-weight: bold;
+    transition: all 100ms ease-in-out;
+  }
+
+  .ui-button:hover {
+    color: white;
+    background: #108789;
+  }
+
+  #body-span,
+  #header-span {
+    background-color: #f7f7f7;
+    background-image: none;
+  }
+
+  #area-mb1-parent {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+  }
+
+  .display-none,
+  #header-span,
+  #login-top-box,
+  #wf_PTW0000100-m_20130724111549-box,
+  #wf_PTW0000100-m_20140915192449-box,
+  #footer-span,
+  #login-sec1-msg .ja,
+  #portlet-break,
+  button[type="button"] {
+    display: none;
+  }
+}
+
 @-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*(campussquare|page=main).*") {
   if not show-left-sidebar {
     #area-m1-parent {
@@ -25,7 +119,8 @@
     --sidebar-top: calc(7rem + 1.2rem);
   }
 
-  body, html {
+  body,
+  html {
     margin: 0;
     padding: 0;
   }
