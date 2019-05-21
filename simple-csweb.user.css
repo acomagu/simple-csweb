@@ -187,6 +187,7 @@
   }
 
   #body-span {
+    width: calc(100% - (50vw - 30rem + 14rem)) !important;
     position: relative;
     left: calc(50vw - 30rem + 14rem);
   }
