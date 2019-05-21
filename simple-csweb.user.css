@@ -87,6 +87,8 @@
 
   #header-area .portlet:first-child {
     width: 10.9rem;
+    padding-top: 0.95rem;
+    padding-bottom: calc(1.6rem - 0.95rem);
   }
 
   #body-span {
