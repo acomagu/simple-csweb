@@ -332,7 +332,7 @@ regexp("https://csweb.u-aizu.ac.jp/campusweb(?!.*tabId=).*") {
 
 @-moz-document regexp("https://csweb.u-aizu.ac.jp/campusweb.*tabId=si.*") {
   #tabtable .tabcell.tabcell-sel {
-    margin-bottom: calc(2 * 2.6rem);
+    margin-bottom: calc(3 * 2.6rem);
   }
 
   #tabmenu-area {
